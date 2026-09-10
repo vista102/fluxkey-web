@@ -1,0 +1,431 @@
+/* Keep the default palette visible in a 1080p browser workspace. */
+.tracking-card {
+  border: 1px solid #e1e5da;
+  border-radius: 6px;
+  background: #ffffffa0;
+  padding: 15px 18px 12px;
+}
+.tracking-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.tracking-heading h3 {
+  margin: 0;
+  font-size: 11px;
+}
+.tracking-heading p {
+  font-size: 10px;
+  margin: 4px 0 0;
+}
+.tracking-heading button {
+  font-size: 10px;
+  white-space: nowrap;
+  padding: 6px 9px;
+}
+.demo-badge {
+  color: #788464;
+  font-size: 8px;
+  border: 1px solid #dce3d0;
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin-left: 6px;
+}
+.tracking-metrics {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 12px 0 0;
+  font-size: 10px;
+  color: #758069;
+}
+.tracking-metrics > b {
+  font-size: 22px;
+  color: #28351c;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+.tracking-metrics > span:last-child {
+  margin-left: auto;
+}
+.tracking-live {
+  color: #6e9811;
+}
+.tracking-graph {
+  display: block;
+  width: 100%;
+  height: 140px;
+}
+.tracking-graph text {
+  font-size: 10px;
+  fill: #77836b;
+}
+.tracking-graph .tracking-placeholder {
+  font-size: 12px;
+}
+.tracking-legend {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #728061;
+  font-size: 9px;
+}
+.tracking-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tracking-legend i {
+  width: 14px;
+  border-top: 2px solid #86b51b;
+}
+.tracking-legend i.dashed {
+  border-top: 1px dashed #76865f;
+}
+.tracking-legend small {
+  margin-left: auto;
+  font-size: 9px;
+}
+@media (max-width: 600px) {
+  .tracking-heading {
+    flex-wrap: wrap;
+  }
+  .tracking-legend {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tracking-legend small {
+    width: 100%;
+    margin: 0;
+  }
+  .tracking-card {
+    padding: 12px;
+  }
+  .tracking-graph {
+    height: auto;
+  }
+}
+@media (min-width: 1500px) {
+  .board-section {
+    max-width: 780px;
+  }
+}
+/* Desktop density: shrink geometry/spacing, never hide overflow or scale text. */
+@media (min-width: 951px) {
+  .app-shell[data-section="advanced"] .editor .stack {
+    margin-block: 6px;
+  }
+  .app-shell[data-section="advanced"] .test-area {
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+  .app-shell[data-section="advanced"] .card .tabs {
+    margin-bottom: 8px;
+  }
+}
+.key .key-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 2px;
+  overflow: visible;
+  line-height: 1;
+}
+.key .key-settings small {
+  margin: 0;
+  font-size: clamp(6px, 0.52vw, 8px);
+  font-variant-numeric: tabular-nums;
+}
+.advanced-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+  font-weight: 700;
+}
+.advanced-tabs button small {
+  font-weight: 400;
+  font-size: 10px;
+}
+.advanced-fields {
+  padding: 12px;
+  background: #f7f9f2;
+  border: 1px solid #e1e6d8;
+  border-radius: 5px;
+}
+.advanced-panel .stack {
+  font-size: 12px;
+  font-weight: 600;
+}
+.advanced-panel select {
+  font-size: 12px;
+  font-weight: 400;
+}
+.advanced-fields .range-field {
+  font-size: 12px;
+}
+.advanced-test {
+  margin-top: 10px;
+  border-top: 1px solid #e1e6d8;
+  padding-top: 8px;
+}
+.advanced-test summary {
+  cursor: pointer;
+  font-size: 11px;
+}
+.advanced-test summary small {
+  color: #76816b;
+  margin-left: 10px;
+}
+@media (min-width: 951px) {
+  .app-shell[data-section="advanced"] .editor .dks-matrix .stack {
+    margin: 0;
+  }
+  .advanced-fields .dks-matrix {
+    gap: 4px;
+  }
+  .advanced-fields .dks-thresholds {
+    gap: 6px 14px;
+  }
+  .advanced-panel > .card {
+    padding: 12px;
+  }
+  .advanced-panel .section-heading {
+    margin-bottom: 8px;
+  }
+  .advanced-panel .test-area output {
+    font-size: 10px;
+  }
+}
+@media (min-width: 951px) {
+  .inspector {
+    display: flex;
+    flex-direction: column;
+  }
+  .app-shell .inspector > section {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .app-shell .inspector > section:last-child {
+    flex-grow: 1.5;
+  }
+  .inspector .travel-chart {
+    align-self: stretch;
+  }
+  .advanced-fields[data-mode="SOCD"],
+  .advanced-fields[data-mode="RS"],
+  .advanced-fields[data-mode="MT"],
+  .advanced-fields[data-mode="END"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+    align-items: center;
+  }
+  .advanced-fields[data-mode="SOCD"] > .two-col {
+    grid-row: 1 / 3;
+  }
+  .advanced-fields[data-mode="SOCD"] > .tabs {
+    margin: 0;
+  }
+  .advanced-fields[data-mode="SOCD"] > .range-field {
+    grid-column: 2;
+    margin: 0;
+  }
+  .advanced-fields[data-mode="DKS"] {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 8px 18px;
+  }
+  .advanced-fields[data-mode="DKS"] > p {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+  .advanced-fields .dks-thresholds {
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+  }
+  .advanced-fields .dks-matrix {
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+  }
+  .advanced-fields .dks-matrix .stack {
+    font-size: 0;
+    gap: 0;
+  }
+  .advanced-fields .dks-matrix select {
+    padding: 5px;
+  }
+  .advanced-panel .test-area {
+    justify-content: space-between;
+  }
+  .advanced-panel .test-area label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  .advanced-panel .test-area input {
+    margin: 0;
+    width: 210px;
+  }
+}
+@media (max-width: 1250px) {
+  .advanced-tabs button {
+    flex-direction: column;
+    gap: 2px;
+    padding: 5px 7px;
+  }
+}
+@media (min-width: 951px) {
+  .workspace {
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+  .workspace-heading {
+    margin-bottom: 16px;
+  }
+  .board-section {
+    width: 100%;
+    max-width: 780px;
+    margin-inline: auto;
+  }
+  .selection-toolbar {
+    margin-bottom: 8px;
+  }
+  .board-caption {
+    margin-top: 12px;
+    margin-bottom: 14px;
+  }
+  .editor {
+    padding-top: 14px;
+  }
+  .inspector {
+    padding: 16px 20px;
+  }
+  .inspector-title {
+    padding-bottom: 10px;
+  }
+  .app-shell .inspector section {
+    padding-block: 12px;
+  }
+  .selected-letter {
+    font-size: 36px;
+  }
+  .inspector .big-value {
+    font-size: 38px;
+    margin-block: 10px;
+  }
+  .inspector p {
+    margin-bottom: 8px;
+  }
+  .inspector .range-field {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+  .inspector .toggle-field {
+    margin-block: 6px;
+  }
+  .inspector .travel-chart {
+    margin-top: 8px;
+    max-height: 105px;
+  }
+  .inspector .hint {
+    margin-top: 6px;
+  }
+}
+@media (min-width: 1051px) and (max-width: 1250px) {
+  .workspace-heading {
+    flex-direction: row;
+    align-items: center;
+  }
+  .layers {
+    align-self: auto;
+  }
+  .layers button {
+    padding: 8px;
+    font-size: 10px;
+  }
+  .workspace-heading p {
+    max-width: 280px;
+  }
+  .lighting-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .lighting-grid > .card:last-child {
+    grid-column: auto;
+    display: block;
+  }
+  .lighting-grid .card {
+    padding: 10px;
+  }
+  .lighting-grid .card h3 {
+    font-size: 11px;
+  }
+  .lighting-grid .card > button {
+    padding: 6px;
+  }
+}
+@media (min-width: 951px) and (max-width: 1250px) {
+  .board-section {
+    max-width: 600px;
+  }
+}
+@media (min-width: 951px) and (max-height: 850px) {
+  .board-section {
+    max-width: 660px;
+  }
+  .workspace-heading {
+    margin-bottom: 10px;
+  }
+  .board-caption {
+    margin-block: 8px;
+  }
+  .app-shell .inspector section {
+    padding-block: 9px;
+  }
+  .inspector .travel-chart {
+    max-height: 85px;
+  }
+}
+.palette-groups {
+  gap: 0;
+}
+.palette-groups button {
+  flex: 1;
+  padding: 6px;
+  font-size: 10px;
+}
+.palette-categories button,
+.nav-item span {
+  word-break: keep-all;
+}
+.key {
+  font-size: clamp(8px, 0.66vw, 11px);
+}
+.inspector .two-col .field-heading {
+  display: block;
+}
+.inspector .two-col .range-value {
+  margin-top: 4px;
+}
+.range-field .field-heading > span:first-child {
+  word-break: keep-all;
+}
+.switch-grid {
+  max-height: 245px;
+  overflow-y: auto;
+}
+.inspector section {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+@media (max-width: 600px) {
+  .key {
+    font-size: 6px;
+  }
+}
